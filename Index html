@@ -1,0 +1,76 @@
+!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fast Typing App</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 50px;
+      background: #f4f4f9;
+    }
+    h1 {
+      color: #333;
+    }
+    #quote {
+      font-size: 20px;
+      margin: 20px;
+      padding: 10px;
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+    #input {
+      width: 80%;
+      padding: 10px;
+      font-size: 18px;
+      margin-top: 10px;
+    }
+    #result {
+      margin-top: 20px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      background: #28a745;
+      color: white;
+      border: none;
+      border-radius: 5px;
+    }
+    button:hover {
+      background: #218838;
+    }
+  </style>
+</head>
+<body>
+  <h1>🚀 Fast Typing App</h1>
+  <p id="quote">Hello world, welcome to typing practice!</p>
+  
+  <input type="text" id="input" placeholder="Start typing here..." />
+  <div id="result"></div>
+  
+  <button onclick="checkTyping()">Check</button>
+
+  <script>
+    function checkTyping() {
+      const quote = document.getElementById("quote").innerText;
+      const input = document.getElementById("input").value;
+      const result = document.getElementById("result");
+
+      if (input === quote) {
+        result.innerHTML = "✅ Correct! Good job 🎉";
+        result.style.color = "green";
+      } else {
+        result.innerHTML = "❌ Wrong! Try again...";
+        result.style.color = "red";
+      }
+    }
+  </script>
+</body>
+</html>
